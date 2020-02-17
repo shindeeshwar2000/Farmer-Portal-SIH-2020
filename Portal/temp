@@ -1,0 +1,175 @@
+
+
+# was_accepted = session.request_authorization()
+# print(was_accepted)
+# message = None
+# message = service.fetch_message_history()[0]
+# print(message.content, message.phone)
+# while True:
+#     message = service.fetch_message_history()[0]
+#     if not (message.was_read):
+#         print(message.content, message.phone)
+#         service.send_message(message.phone, "your order has been successfully placed")
+#         break
+#     time.sleep(1)
+# args = {}
+# print("ok")
+
+
+            
+#     args = {}
+#     print("ok")
+#     args['msg'] = message.content
+#     args['phone'] = message.phone
+    # return render(request,'Display_Msg.html',{'args' :args})
+
+
+
+# profile = {
+#     'Name':"Raja",
+#     'Address':'Solapur'
+# }   
+# database.child('users').child("Farmers").child("+919922716485").set(profile)
+
+
+
+# cred = credentials.Certificate("/home/prathamesh/Downloads/cpanel-52867-firebase-adminsdk-3g80u-7933dcb931.json")
+# firebase_admin.initialize_app(cred)
+
+# user = admin.create_user( 
+    
+#     email='Dev@example.com',
+#     email_verified=False,
+#     phone_number='+919595666570',
+#     password='123456',
+#     display_name='Dev',
+#     photo_url='http://www.example.com/12345678/photo.png',
+#     disabled=False
+# )
+# print('Sucessfully created new user: {0}'.format(user.uid))
+
+
+
+# print(data_1)
+# print(data_2)
+# print(data_3)
+
+    
+# return redirect('/')
+
+
+ # print('Successfully fetched user data: {0}'.format(user.uid))
+# id_1 = format(user.uid)
+# id_2 = user.uid
+# print(admin.get_user(id_1))
+# print(admin.get_user(id_2))
+# print(user)
+# print("/////////////////////")
+# data_1 = (user.provider_data)
+
+
+
+
+
+# def product_list(request,Name):
+    
+#     Fruits = [ "Apple" , "Tomato" ,"Onion" ,"Mango" , "Banana"]        
+#     li=[]
+#     args = {}
+#     all_users = database.child("users").child("Farmers").get()
+    
+#     for user in all_users.each():
+#         # print(user.val())
+#         for key, value in (user.val()['Produce']).items():
+        
+#             if key in Name:
+#                 print(key,value)
+#                 print(user.val()['Name'])
+#                 print(key,value)
+#                 list_inside= [user.key(),user.val()['Name'] ,key , (user.val()['Address']) , value['Price'] ,value['Qty'] , "OK"  ]
+#                 li.append(list_inside)
+#                 list_inside=[]
+#     args['list_of_farmers'] = li
+#     args['Frutis_Name'] = Name
+#     print(user.val()['Name'])
+    
+#     return render(request, 'product-list.html',args)
+
+
+
+
+# Fruits = [ "Apple" , "Tomato" ,"Onion" ,"Mango" , "Banana"]        
+# Fruits = [  "Tomato" ]        
+# li=[]
+# args = {}
+# all_users = database.child("users").child("Farmers").get()
+
+# for user in all_users.each():
+#     # print(user.val())
+#     for key, value in (user.val()['Produce']).items():       
+#         if key in Fruits:
+#             print("///////////////////////")
+#             print(key,value)
+#             print("**************************************")
+#             print(str(user.val()['Produce']))
+#             print("==========================")
+#             list_inside= [user.key(),user.val()['Name'] ,key , (user.val()['Address']) , value['Price'] ,value['Qty']  ]
+#             li.append(list_inside)
+#             list_inside=[]
+# args['list_of_farmers'] = li
+# args['Frutis_Name'] = Name
+
+
+Order_List = {
+    'Delivery-Options':"0",
+    'Farmer':'+919595666570',
+    'Price':'200',
+    'Produce-Name':'OK',
+    'Qty':'50kg'
+}   
+database.child('users').child("Buyers").child("+919881247910").child("Order-List").set(Order_List)
+
+Order_List = {
+
+'Buyer':'+919595666570',
+'Price':'200',
+'Produce-Name':'OK',
+'Qty':'50kg'
+}   
+database.child('users').child("Farmers").child("+919595666570").child("Produce-Request").set(Order_List)
+
+
+profile = {
+    'Name':"Rajas",
+    'Address':'Mumbai'
+}   
+database.child('users').child("Buyers").child("+919922716485").set(profile)
+
+Order_List = {
+    'Buyer':'+919881247910',
+    'Price':'200',
+    'Qty':'50kg'
+}   
+
+database.child('users').child("Farmers").child("+919595666570").child("Produce-Request").child("Apple").set(Order_List)
+
+
+
+data_farmer = database.child('users').child("Farmers").child("+919595666570").child("Produce-Request").get().val()
+
+print(data_farmer)
+li = []
+for key, value in data_farmer.items():
+    temp = []
+    temp.append(key)
+    temp.append(value['Price'])
+    temp.append(value['Qty'])
+    li.append(temp)    
+
+print(li)
+    
+    # li.append(li[2]['Farmer'])
+    # li.append(li[2]['Price'])
+    # li.append(li[2]['Qty'])
+    # li.append(li[2]['Produce-Name'])
+    # li.append(li[2]['Delivery-Options'])

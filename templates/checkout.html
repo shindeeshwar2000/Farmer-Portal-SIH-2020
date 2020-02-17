@@ -1,0 +1,425 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Farmer's Portal</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-commerce site well design with responsive view." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{% static '../static/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+<link href="{% static '../static/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
+<link href="{% static '../static/css/stylesheet.css' %}" rel="stylesheet">
+<link href="{% static '../static/css/responsive.css' %}" rel="stylesheet">
+<link href="{% static '../static/owl-carousel/owl.carousel.css' %}" type="text/css" rel="stylesheet" media="screen" />
+<link href="{% static '../static/owl-carousel/owl.transitions.css' %}" type="text/css" rel="stylesheet" media="screen" />
+<script src="{% static '../static/javascript/jquery-2.1.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static '../static/javascript/jstree.min.js' %}"></script>
+<script type="text/javascript" src="{% static '../static/javascript/template.js' %}"></script>
+<script src="{% static '../static/javascript/common.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/javascript/global.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/owl-carousel/owl.carousel.min.js' %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="https://i.imgur.com/jlp59FD.gifv"  alt="#"/></div>
+
+<style type="text/css">
+  @media screen and (max-width: 991px) {
+  }
+</style>
+
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-right pull-right">
+            <div id="top-links" class="nav pull-right">
+              <ul class="list-inline">
+                <li class="dropdown"><a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i><span>Hi ! Guest</span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="orders.html">My Orders</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="#" id="wishlist-total" title="Wish List (0)"><i class="fa fa-heart"></i><span>Wish List</span><span> (0)</span></a></li> -->
+              </ul>
+              <div class="search-box">
+                <input class="input-text" placeholder="search.." type="text">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="col-sm-4 col-xs-6 header-left">
+        <div class="shipping">
+          <div class="shipping-img"></div>
+          <div class="shipping-text">+91(000)1234-1234<span class="shipping-detail">Week From 9:00am To 7:00pm</span></div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-middle">
+        <div class="header-middle-top">
+          <div id="logo"> <a href="index.html"><img src="https://i.imgur.com/BUEFw7V.png" title="E-Commerce" alt="E-Commerce" class="img-responsive" /></a> </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-right">
+        <div id="cart" class="btn-group btn-block">
+          <button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle cart-dropdown-button"> <span id="cart-total"><span class="cart-title">Shopping Cart</span><br>
+          0 item(s) - Rs 0.00</span> </button>
+          <ul class="dropdown-menu pull-right cart-dropdown-menu">
+            <li>
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td class="text-center"></td>
+                    <td class="text-left"><a href="#">ProductName</a></td>
+                    <td class="text-right">x 1</td>
+                    <td class="text-right">Rs 254.00</td>
+                    <td class="text-center"><button class="btn btn-danger btn-xs" title="Remove" type="button"><i class="fa fa-times"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <hr>
+            <li>
+              <div>
+                <p class="text-right"> <span class="btn-viewcart"><a href="cart.html"><strong><i class="fa fa-shopping-cart"></i> View Cart</strong></a></span> <span class="btn-checkout"><a href="checkout.html"><strong><i class="fa fa-share"></i> Checkout</strong></a></span> </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<nav id="menu" class="navbar">
+  <div class="nav-inner container">
+    <div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" ><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="main-navigation">
+        <li><a href="index.html"   class="parent"  >Home</a> </li>
+        <li><a href="#"   class="active parent"  >Category</a>
+          <ul>
+            <li><a href="category.html">Fruits</a></li>
+            <li><a href="category.html">Vegetables</a></li>
+            <li><a href="category.html">Grains</a></li>
+            <li><a href="category.html" >Spices</a></li>
+          </ul>
+        </li>
+        <li><a href="category.html"   class="parent"  >Top Selling</a> </li>
+        <li><a href="about-us.html"   class="parent"  >About Us</a> </li>
+        <li><a href="contact.html"   class="parent"  >Contact Us</a> </li>
+        <li><a href="login.html" >My Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <ul class="breadcrumb">
+    <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+    <li><a href="cart.html">Shopping Cart</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+  </ul>
+  <div class="row">
+    <div id="column-left" class="col-sm-3 hidden-xs column-left">
+      <div class="column-block">
+        <div class="column-block">
+          <div class="columnblock-title">Categories</div>
+          <div class="category_block">
+            <ul class="box-category treeview-list treeview">
+              <li><a href="category.html">Fruits</a></li>
+              <li><a href="category.html">Vegetables</a></li>
+              <li><a href="category.html">Spices</a></li>
+              <li><a href="category.html">Grains</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9" id="content">
+      <h1>Checkout</h1>
+      <div id="accordion" class="panel-group">
+        <!-- <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapse-checkout-option" aria-expanded="false">Step 1: Checkout Options <i class="fa fa-caret-down"></i></a></h4>
+          </div>
+          <div id="collapse-checkout-option"  role="heading" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>New Customer</h2>
+                  <p>Checkout Options:</p>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" checked="checked" value="register" name="account">
+                      Register Account</label>
+                  </div>
+                  <div class="radio">
+                    <label>
+                      <input type="radio" value="guest" name="account">
+                      Guest Checkout</label>
+                  </div>
+                  <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
+                  <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-account" value="Continue">
+                </div>
+                <div class="col-sm-6">
+                  <h2>Returning Customer</h2>
+                  <p>I am a returning customer</p>
+                  <div class="form-group">
+                    <label for="input-email" class="control-label">E-Mail</label>
+                    <input type="text" class="form-control" id="input-email" placeholder="E-Mail" value="" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="input-password" class="control-label">Password</label>
+                    <input type="password" class="form-control" id="input-password" placeholder="Password" value="" name="password">
+                    <a href="http://localhost/opc001/index.php?route=account/forgotten">Forgotten Password</a></div>
+                  <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-login" value="Login">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapse-shipping-address" aria-expanded="false">Step 1: Delivery Details <i class="fa fa-caret-down"></i></a></h4>
+          </div>
+          <div id="collapse-shipping-address" role="heading" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+            <div class="panel-body">
+              <form class="form-horizontal">
+                <div class="radio">
+                  <label>
+                    <input type="radio" checked="checked" value="existing" name="shipping_address">
+                    I want to use an existing address</label>
+                </div>
+                <div id="shipping-existing" >
+                  <select class="form-control" name="address_id">
+                    <option selected="selected" value="4"></option>
+                  </select>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" value="new" name="shipping_address">
+                    I want to use a new address</label>
+                </div>
+                <br>
+                <div id="shipping-new" style="display: none;">
+                  <form class="form-horizontal" enctype="multipart/form-data" method="post" action="register.html">
+                <fieldset id="account">
+                    <legend>Receiver Details</legend>
+                    <div class="form-group required">
+                        <label for="input-firstname" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-firstname" placeholder="First Name" value="" name="firstname">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-lastname" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-lastname" placeholder="Last Name" value="" name="lastname">
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="address">
+                    <legend>Delivery Address</legend>
+                    <div class="form-group required">
+                        <label for="input-address" class="col-sm-2 control-label">Address</label>
+                        <div class="col-sm-10">
+                            <textarea type="text" class="form-control" id="input-address" placeholder="Address" value="" name="address_1"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-city" class="col-sm-2 control-label">City</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-city" placeholder="City" value="" name="city">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-state" class="col-sm-2 control-label">State</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-state" placeholder="state" value="" name="state">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-postcode" class="col-sm-2 control-label">Pin Code</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="input-pincode" placeholder="Enter pincode" value="" name="pincode">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons clearfix">
+                  <div class="pull-right">
+                    <input type="button" class="btn btn-primary" data-loading-text="Loading..." id="button-shipping-address" value="Continue">
+                  </div>
+                </div>
+              </form>
+              <script type="text/javascript">
+$('input[name=\'shipping_address\']').on('change', function() {
+	if (this.value == 'new') {
+		$('#shipping-existing').hide();
+		$('#shipping-new').show();
+	} else {
+		$('#shipping-existing').show();
+		$('#shipping-new').hide();
+	}
+});
+</script>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="#collapse-payment-method" aria-expanded="false">Step 2: Payment Method <i class="fa fa-caret-down"></i></a></h4>
+          </div>
+          <div id="collapse-payment-method" role="heading" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+            <div class="panel-body">
+              <p>Please select the preferred payment method to use on this order.</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" checked="checked" value="cod" name="payment_method">
+                  Cash On Delivery </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"><a class="accordion-toggle" data-parent="#accordion" data-toggle="collapse" href="#collapse-checkout-confirm" aria-expanded="true">Step 3: Confirm Order <i class="fa fa-caret-down"></i></a></h4>
+          </div>
+          <div id="collapse-checkout-confirm" role="heading" class="panel-collapse collapse in" aria-expanded="true" style="">
+            <div class="panel-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">Product Name</td>
+                      <td class="text-left">Farmer Name</td>
+                      <td class="text-right">Quantity</td>
+                      <td class="text-right">Unit Price</td>
+                      <td class="text-right">Total</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-left"><a href="http://localhost/opc001/index.php?route=product/product&amp;product_id=46">Apple</a></td>
+                      <td class="text-left">Suresh</td>
+                      <td class="text-right">1</td>
+                      <td class="text-right">Rs 1000.00</td>
+                      <td class="text-right">Rs 1000.00</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td class="text-right" colspan="4"><strong>Sub-Total:</strong></td>
+                      <td class="text-right"> Rs 1000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" colspan="4"><strong>Flat Shipping Rate:</strong></td>
+                      <td class="text-right">Rs 5.00</td>
+                    </tr>
+                    <tr>
+                      <td class="text-right" colspan="4"><strong>Total:</strong></td>
+                      <td class="text-right">Rs 1005.00</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div class="buttons">
+                <div class="pull-right">
+                  <input type="button" data-loading-text="Loading..." class="btn btn-primary" id="button-confirm" value="Confirm Order">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="footer-top-cms">
+        <div class="col-sm-7">
+          <div class="newslatter">
+            <form>
+              <h5>Newsletter</h5>
+              <div class="input-group">
+                <input type="text" class=" form-control" placeholder="Email Here......">
+                <button type="submit" value="Sign up" class="btn btn-large btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="footer-social">
+            <h5>Social</h5>
+            <ul>
+              <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li class="gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Information</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Category</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="category.html">Fruits</a></li>
+          <li><a href="category.html">Vegetables</a></li>
+          <li><a href="category.html">Spices</a></li>
+          <li><a href="category.html">Grains</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Links</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Account</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <div class="content_footercms_right">
+          <div class="footer-contact">
+            <h5 class="contact-title footer-title">Contact Us</h5>
+            <ul class="ul-wrapper">
+              <li><i class="fa fa-map-marker"></i><span class="location2"> Office Address</span></li>
+              <li><i class="fa fa-envelope"></i><span class="mail2"><a href="#">info@localhost.com</a></span></li>
+              <li><i class="fa fa-mobile"></i><span class="phone2">+91 0987-654-321</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="scrollup">Scroll</a>
+</footer>
+<div class="footer-bottom">
+  <div class="container">
+    <div class="copyright">Copyright &copy; 2020 </a> </div>
+  </div>
+</div>
+</body>
+</html>

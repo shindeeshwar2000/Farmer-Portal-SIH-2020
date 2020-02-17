@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Farmer's Portal</title><meta http-equiv="content-type" content="text/html;charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="e-commerce site well design with responsive view." />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="{% static '../static/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+<link href="{% static '../static/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,500,700,900' rel='stylesheet' type='text/css'>
+<link href="{% static '../static/css/stylesheet.css' %}" rel="stylesheet">
+<link href="{% static '../static/css/responsive.css' %}" rel="stylesheet">
+<link href="{% static '../static/owl-carousel/owl.carousel.css' %}" type="text/css" rel="stylesheet" media="screen" />
+<link href="{% static '../static/owl-carousel/owl.transitions.css' %}" type="text/css" rel="stylesheet" media="screen" />
+<script src="{% static '../static/javascript/jquery-2.1.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static '../static/javascript/jstree.min.js' %}"></script>
+<script type="text/javascript" src="{% static '../static/javascript/template.js' %}"></script>
+<script src="{% static '../static/javascript/common.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/javascript/global.js' %}" type="text/javascript"></script>
+<script src="{% static '../static/owl-carousel/owl.carousel.min.js' %}" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="https://i.imgur.com/jlp59FD.gifv"  alt="#"/></div>
+
+<style type="text/css">
+  input, textarea {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  input:focus, textarea:focus {
+    border: 1px solid rgb(125, 180, 50) !important;
+  }
+
+  @media screen and (max-width: 991px) {
+  }
+</style>
+
+<header>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="top-right pull-right">
+            <div id="top-links" class="nav pull-right">
+              <ul class="list-inline">
+                <li class="dropdown"><a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-user"></i><span>Hi ! Guest</span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="#">Profile</a></li>
+                    <li><a onclick="location.href='{% url 'link_myprod' %}' ">My Products</a></li>
+                    <li><a href="farmer_soldprod.html">Order History</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="#" id="wishlist-total" title="Wish List (0)"><i class="fa fa-heart"></i><span>Wish List</span><span> (0)</span></a></li> -->
+              </ul>
+              <div class="search-box">
+                <input class="input-text" placeholder="search.." type="text">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="col-sm-4 col-xs-6 header-left">
+        <div class="shipping">
+          <div class="shipping-img"></div>
+          <div class="shipping-text">+91(000)1234-1234<span class="shipping-detail">Week From 9:00am To 7:00pm</span></div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-middle">
+        <div class="header-middle-top">
+          <div id="logo"> <a href="farmer_dashboard.html"><img src="https://i.imgur.com/BUEFw7V.png" title="E-Commerce" alt="E-Commerce" class="img-responsive" /></a> </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12 header-right"></div>
+    </div>
+  </div>
+</header>
+<nav id="menu" class="navbar">
+  <div class="nav-inner container">
+    <div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" ><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="main-navigation">
+        <li><a href="farmer_dashboard.html"   class="parent"  >Home</a> </li>
+        <li><a href="farmer_market.html"   class="parent"  >Current Market Rate</a> </li>
+        <li><a href="farmer_sell.html"   class="parent"  >Sell Produce</a> </li>
+        <li><a href="about-us.html"   class="parent"  >About Us</a> </li>
+        <li><a href="contact.html"   class="parent"  >Contact Us</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+    <div class="row">
+      <div class="col-sm-3 hidden-xs column-left" id="column-left">
+        <div class="column-block">
+          <div class="columnblock-title">Account</div>
+          <div class="account-block">
+            <div class="list-group">
+              <a class="list-group-item" href="farmer_dashboard.html">Home</a>
+              <a class="list-group-item" href="farmer_myprod.html">My Products</a>
+              <a class="list-group-item" href="farmer_soldprod.html">Order History</a>
+              <a class="list-group-item last" href="#">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-9" id="content">
+            <h1>Sell Produce</h1>
+            <form class="form-horizontal" enctype="multipart/form-data" method="post" action="/Post-form/">
+              {% csrf_token %}
+                <fieldset id="account">
+                    <legend>Produce Details</legend>
+                    <div class="form-group required">
+                        <label for="input-prodname" class="col-sm-3 control-label">Produce Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="input-prodname" placeholder="Enter Produce Name" value="" name="prodname">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-qnty" class="col-sm-3 control-label">Quantity</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="input-qnty" placeholder="Enter Quantity of Produce" value="" name="qnty">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Check Market Rate</label>
+                        <div class="col-sm-9">
+                          <div class="row">
+                            <div class="col-sm-2"><button type="button" class="btn btn-primary" onclick="getPrice()">Check</button></div>
+                            <div class="col-sm-10"><p id="check" style="display: none; padding-top: 4px;">Rs.<strong><span>200</span></strong>/kg</p></div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label for="input-price" class="col-sm-3 control-label">Price(Rs/kg)</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="input-price" placeholder="Enter unit price" value="" name="price">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Delivery Available</label>
+                        <div class="col-sm-9">
+                            <div class="radio">
+                                <label><input type="radio" checked="checked" value="1" name="customer_group_id">Yes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label><input type="radio" value="2" name="customer_group_id">No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="buttons">
+                  <input type="submit" class="btn btn-success" value="Confirm">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="footer-top-cms">
+        <div class="col-sm-7">
+          <div class="newslatter">
+            <form>
+              <h5>Newsletter</h5>
+              <div class="input-group">
+                <input type="text" class=" form-control" placeholder="Email Here......">
+                <button type="submit" value="Sign up" class="btn btn-large btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <div class="footer-social">
+            <h5>Social</h5>
+            <ul>
+              <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li class="gplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li class="youtube"><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Information</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Sell</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="farmer_sell.html">Sell Products</a></li>
+          <li><a href="farmer_market.html">Current Market Rate</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <h5 class="footer-title">Links</h5>
+        <ul class="list-unstyled ul-wrapper">
+          <li><a href="farmer_dashboard.html">Home</a></li>
+          <li><a href="login.html">Account</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 footer-block">
+        <div class="content_footercms_right">
+          <div class="footer-contact">
+            <h5 class="contact-title footer-title">Contact Us</h5>
+            <ul class="ul-wrapper">
+              <li><i class="fa fa-map-marker"></i><span class="location2"> Office Address</span></li>
+              <li><i class="fa fa-envelope"></i><span class="mail2"><a href="#">info@localhost.com</a></span></li>
+              <li><i class="fa fa-mobile"></i><span class="phone2">+91 0987-654-321</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a id="scrollup">Scroll</a>
+</footer>
+<div class="footer-bottom">
+  <div class="container">
+    <div class="copyright">Copyright &copy; 2020 </a> </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    function getPrice() {
+      document.getElementById('check').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
