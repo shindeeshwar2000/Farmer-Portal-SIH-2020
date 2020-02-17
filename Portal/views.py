@@ -26,26 +26,15 @@ import random
 
 
 
-# config = {
-#     'apiKey': "AIzaSyA7JMfUB2XdR3OnmuM5gN0Ma1L-6yS2RsA",
-#     'authDomain': "cpanel-52867.firebaseapp.com",
-#     'databaseURL': "https://cpanel-52867.firebaseio.com",
-#     'projectId': "cpanel-52867",
-#     'storageBucket': "cpanel-52867.appspot.com",
-#     'messagingSenderId': "940927878646",
-#     'appId': "1:940927878646:web:7bfb616abda15cab9373d7",
-#     'measurementId': "G-R72FN0C1LJ"
-# }
-
 config = {
-    'apiKey': "AIzaSyA7A4K8zW30Kqcn9o-ftpnvfTdKQzvMtag",
-    'authDomain': "loginregister-5c8a7.firebaseapp.com",
-    'databaseURL': "https://loginregister-5c8a7.firebaseio.com",
-    'projectId': "loginregister-5c8a7",
-    'storageBucket': "loginregister-5c8a7.appspot.com",
-    'messagingSenderId': "786367269805",
-    'appId': "1:786367269805:web:ca5179e64750332d012f24",
-    'measurementId': "G-3Z941MD1D7"
+    'apiKey': "",
+    'authDomain': "",
+    'databaseURL': "",
+    'projectId': "",
+    'storageBucket': "",
+    'messagingSenderId': "",
+    'appId': "",
+    'measurementId': ""
 }
 
 
